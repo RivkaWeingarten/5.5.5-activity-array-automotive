@@ -37,35 +37,23 @@ class Car extends VehicleModule.Vehicle {
             console.log("no service needed")
         }
     }
+        passengerCount(passenger, maxPassengers) {
+            if (passenger > maxPassengers  ) {
+                console.log('sorry, you dont fit into this car')
+                
+                
+            }
+            else {
+                console.log('you fit! come on in!')
+            }   // tellMaxPassengers(make,model,maxPassengers){
+        //     console.log(this.make + " " +this.model +'  can only hold' + this.maxPassengers)
+        // }
+    }
+
+
 }
 
 let sedan = new Car('Toyota', 'Camri', '2020', 'green', 40000)
 sedan.start()
-sedan.maintainService(40000)
-//After you write the derived Car class, you should test it out.
-
-//Note: You can code your derived Car class here or make a file named index.js and do it there.
-
-
-//TO DO: Code the Car subclass here or in index.js file, i.e. class Car extends Vehicle ...
-
-
-
-
-
-
-
-
-
-
-
-
-//TO DO: Creating Instances and Testing Them
-
-//You can use the same instance "v" of the Vehicle class above for the base class.
-
-
-
-
-
-//Create at least two new instances of the Car class and test them here:
+sedan.maintainService()
+sedan.passengerCount(5,4)
